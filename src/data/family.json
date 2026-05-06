@@ -7,7 +7,7 @@
       "Djumari",
       "Rohmanah",
       "Sunahromi",
-      "Mukharomi",
+      "Mucharomi",
       "Muhlisum",
       "Sumpono"
     ]
@@ -49,9 +49,9 @@
   },
   {
     "id": 7,
-    "husband": "Mukharomi",
-    "wife": "Sukanti",
-    "children": ["Atik (Mukharomi)", "Yudi", "Fita"]
+    "husband": "Mucharomi",
+    "wife": "Kanti Wiworo Rahayu",
+    "children": ["Atik Ismawanti", "Yudi", "Fita"]
   },
   {
     "id": 8,
@@ -165,9 +165,9 @@
   },
   {
     "id": 25,
-    "husband": "Ozi",
-    "wife": "Atik (Mukharomi)",
-    "children": ["Ori", "Amar"]
+    "husband": "Sahroji",
+    "wife": "Atik Ismawanti",
+    "children": ["Orryansah Al Muhtarom", "Ammar Winata Hadyansah"]
   },
   {
     "id": 26,
