@@ -1,17 +1,165 @@
 ---
+import "../styles/global.css";
+import family from "../data/family.json";
+import TreeNode from "../components/TreeNode.astro";
 
+const root = "Sundari";
 ---
 
-<html lang="en">
+<html lang="id">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Silsilah Keluarga Bani Sumandar</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+
+	<body class="min-h-screen bg-amber-100 px-4 py-8 text-stone-800 md:px-8">
+		<main
+			class="mx-auto max-w-5xl rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-amber-200 md:p-10"
+		>
+			<!-- HEADER -->
+			<header class="mb-8">
+				<p
+					class="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700"
+				>
+					Family Tree
+				</p>
+
+				<h1
+					class="mt-3 text-3xl font-bold tracking-tight text-stone-900 md:text-4xl"
+				>
+					Silsilah Keluarga Bani Sumandar
+				</h1>
+
+				<p class="mt-3 max-w-2xl text-stone-600">
+					Dokumentasi silsilah keluarga dalam bentuk pohon interaktif.
+				</p>
+			</header>
+
+			<!-- SEARCH -->
+			<div class="mb-6 max-w-xl">
+				<label
+					for="searchInput"
+					class="mb-2 block text-sm font-semibold text-stone-700"
+				>
+					Cari Anggota Keluarga atau Namamu
+				</label>
+
+				<input
+					id="searchInput"
+					type="text"
+					placeholder="Type a name, e.g. Arkansyah"
+					class="w-full rounded-xl border border-amber-200 bg-white px-4 py-3 text-stone-800 shadow-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
+				/>
+			</div>
+
+			<!-- ACTION BUTTONS -->
+			<div class="mb-8 flex flex-wrap gap-3">
+				<button
+					id="expandAllBtn"
+					type="button"
+					class="rounded-xl border border-emerald-300 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-800 transition hover:bg-emerald-100"
+				>
+					Tampilkan Semua
+				</button>
+
+				<button
+					id="collapseAllBtn"
+					type="button"
+					class="rounded-xl border border-amber-300 bg-white px-4 py-2 text-sm font-semibold text-stone-700 transition hover:bg-amber-100"
+				>
+					Tutup Semua
+				</button>
+			</div>
+
+			<!-- TREE -->
+			<section
+				class="max-w-full overflow-x-scroll rounded-2xl border border-amber-200 bg-amber-50/60 p-5"
+			>
+				<div class="w-max min-w-[900px]">
+					<ul class="space-y-6">
+						<TreeNode person={root} families={family} />
+					</ul>
+				</div>
+			</section>
+
+			<!-- FOOTER -->
+			<footer
+				class="mt-10 border-t border-amber-200 pt-6 text-sm text-stone-500"
+			>
+				Created by Arkansyah Putra Wibowo
+			</footer>
+		</main>
 	</body>
 </html>
+
+<script>
+	const searchInput = document.getElementById("searchInput");
+
+	searchInput?.addEventListener("input", (event) => {
+		const target = event.target;
+		if (!(target instanceof HTMLInputElement)) return;
+
+		const keyword = target.value.toLowerCase().trim();
+		const nodes = document.querySelectorAll(".family-node");
+
+		nodes.forEach((node) => {
+			const personName = node.getAttribute("data-person") || "";
+			const card = node.querySelector(".person-card");
+
+			card?.classList.remove(
+				"border-emerald-500",
+				"bg-emerald-100",
+				"text-emerald-900",
+				"font-semibold",
+			);
+
+			if (!keyword) return;
+
+			if (personName.includes(keyword)) {
+				card?.classList.add(
+					"border-emerald-500",
+					"bg-emerald-100",
+					"text-emerald-900",
+					"font-semibold",
+				);
+
+				let parent = node.parentElement;
+
+				while (parent) {
+					if (parent.tagName.toLowerCase() === "details") {
+						parent.setAttribute("open", "");
+					}
+
+					const parentDetails = parent.closest("details");
+
+					if (parentDetails) {
+						parentDetails.setAttribute("open", "");
+					}
+
+					parent = parent.parentElement;
+				}
+
+				node.scrollIntoView({
+					behavior: "smooth",
+					block: "center",
+				});
+			}
+		});
+	});
+
+	const expandAllBtn = document.getElementById("expandAllBtn");
+	const collapseAllBtn = document.getElementById("collapseAllBtn");
+
+	expandAllBtn?.addEventListener("click", () => {
+		document.querySelectorAll("details").forEach((detail) => {
+			detail.setAttribute("open", "");
+		});
+	});
+
+	collapseAllBtn?.addEventListener("click", () => {
+		document.querySelectorAll("details").forEach((detail) => {
+			detail.removeAttribute("open");
+		});
+	});
+</script>

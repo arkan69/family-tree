@@ -1,0 +1,49 @@
+---
+const { person, families } = Astro.props;
+
+const personFamilies = families.filter(
+    (f: any) => f.husband === person || f.wife === person,
+);
+---
+
+<li class="relative pl-4 family-node" data-person={person.toLowerCase()}>
+    {
+        personFamilies.length > 0 ? (
+            <div class="space-y-5">
+                {personFamilies.map((family: any) => (
+                    <details>
+                        <summary class="cursor-pointer list-none">
+                            <span class="person-card inline-block rounded-xl border border-amber-200 bg-white px-5 py-3 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-400 hover:bg-emerald-50">
+                                <span class="flex items-center gap-2">
+                                    <span class="font-semibold">{person}</span>
+
+                                    <span class="text-stone-400">&</span>
+
+                                    <span class="italic text-stone-500">
+                                        {family.husband === person
+                                            ? (family.wife ?? "Mantan Pasangan")
+                                            : (family.husband ??
+                                              "Mantan Pasangan")}
+                                    </span>
+                                </span>
+                            </span>
+                        </summary>
+
+                        <ul class="ml-6 mt-4 space-y-4 border-l-2 border-amber-300 pl-5">
+                            {family.children.map((child: string) => (
+                                <Astro.self
+                                    person={child}
+                                    families={families}
+                                />
+                            ))}
+                        </ul>
+                    </details>
+                ))}
+            </div>
+        ) : (
+            <span class="person-card inline-block rounded-xl border border-amber-200 bg-white px-5 py-3 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-400 hover:bg-emerald-50">
+                <span class="font-semibold">{person}</span>
+            </span>
+        )
+    }
+</li>

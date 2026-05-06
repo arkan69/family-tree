@@ -1,0 +1,226 @@
+[
+  {
+    "id": 1,
+    "husband": "Sumandar",
+    "wife": "Sundari",
+    "children": [
+      "Jumari",
+      "Rohmanah",
+      "Sunahromi",
+      "Mukharomi",
+      "Muhlisum",
+      "Sumpono"
+    ]
+  },
+  {
+    "id": 2,
+    "husband": "Mantan Pasangan",
+    "wife": "Sundari",
+    "children": ["Ahmad Syafii", "Mugeno"]
+  },
+  {
+    "id": 3,
+    "husband": "Jumari",
+    "wife": "Kasyamirah",
+    "children": [
+      "Mindarwati",
+      "Noor Ismiyati",
+      "Susianto (Makin)",
+      "Rina Noviana"
+    ]
+  },
+  {
+    "id": 4,
+    "husband": "Janadi",
+    "wife": "Rohmanah",
+    "children": ["Atik (Rohmanah)", "Juliatun", "Muhammad Khalimin"]
+  },
+  {
+    "id": 5,
+    "husband": "Mantan Pasangan",
+    "wife": "Rohmanah",
+    "children": ["Amir"]
+  },
+  {
+    "id": 6,
+    "husband": "Sukir",
+    "wife": "Sunahromi",
+    "children": ["Kholisatun", "Kholisun", "Syafarodin"]
+  },
+  {
+    "id": 7,
+    "husband": "Mukharomi",
+    "wife": "Sukanti",
+    "children": ["Atik (Mukharomi)", "Yudi", "Fita"]
+  },
+  {
+    "id": 8,
+    "husband": "Muhlisum",
+    "wife": "Nurhidayah",
+    "children": ["Estu S.", "Ema O."]
+  },
+  {
+    "id": 9,
+    "husband": "Sumpono",
+    "wife": "Arni Astuti",
+    "children": [
+      "Wahid Ariffiyono",
+      "Eri Erviana",
+      "Danang Setiono",
+      "Reza Nugroho"
+    ]
+  },
+  {
+    "id": 10,
+    "husband": "Muntako",
+    "wife": "Mindarwati",
+    "children": ["Ghulam"]
+  },
+  {
+    "id": 11,
+    "husband": "Muntako",
+    "wife": "Mantan Pasangan",
+    "children": ["Haidar", "Deri"]
+  },
+  {
+    "id": 12,
+    "husband": "Jono Wibowo",
+    "wife": "Noor Ismiyati",
+    "children": [
+      "Arkansyah Putra Wibowo",
+      "Khansa Sausan Farrasania"
+    ]
+  },
+  {
+    "id": 13,
+    "husband": "Susianto (Makin)",
+    "wife": "Luluk",
+    "children": ["Luthfi"]
+  },
+  {
+    "id": 14,
+    "husband": "Sabaryanto",
+    "wife": "Rina Noviana",
+    "children": ["Ahmad Musyaffa", "Abdul Rozaq"]
+  },
+  {
+    "id": 15,
+    "husband": "Amir Nurhazi",
+    "wife": "Solikhatun",
+    "children": ["Winda", "Azis"]
+  },
+  {
+    "id": 16,
+    "husband": "Sujarodin",
+    "wife": "Atik (Rohmanah)",
+    "children": ["Sholeh", "Ibra N.", "Arda A.", "Kitsa"]
+  },
+  {
+    "id": 17,
+    "husband": "Kharor",
+    "wife": "Juliatun",
+    "children": ["Aska"]
+  },
+  {
+    "id": 18,
+    "husband": "Muhammad Khalimin",
+    "wife": "Dewi",
+    "children": ["Sasa"]
+  },
+  {
+    "id": 19,
+    "husband": "Panggih",
+    "wife": "Kholisatun",
+    "children": ["Juli", "Walid"]
+  },
+  {
+    "id": 20,
+    "husband": "Wawan",
+    "wife": "Juli",
+    "children": ["Arfa", "Arni"]
+  },
+  {
+    "id": 21,
+    "husband": "Kholisun",
+    "wife": "Puji",
+    "children": ["Rini", "Dewi (Kholisun)", "Aulia", "Suci"]
+  },
+  {
+    "id": 22,
+    "husband": "Agung",
+    "wife": "Rini",
+    "children": ["Virli"]
+  },
+  {
+    "id": 23,
+    "husband": "Edi",
+    "wife": "Dewi (Kholisun)",
+    "children": ["Ehwan"]
+  },
+  {
+    "id": 24,
+    "husband": "Syafarodin",
+    "wife": "Onah",
+    "children": ["Arum"]
+  },
+  {
+    "id": 25,
+    "husband": "Ozi",
+    "wife": "Atik (Mukharomi)",
+    "children": ["Ori", "Amar"]
+  },
+  {
+    "id": 26,
+    "husband": "Yudi",
+    "wife": "Ndari",
+    "children": ["Fatir", "Rayyan"]
+  },
+  {
+    "id": 27,
+    "husband": "Irfan",
+    "wife": "Fita",
+    "children": ["Naysila"]
+  },
+  {
+    "id": 28,
+    "husband": "Estu S.",
+    "wife": "Lilis",
+    "children": ["Velis", "Elvano"]
+  },
+  {
+    "id": 29,
+    "husband": "Wahid Ariffiyono",
+    "wife": "Ermawati",
+    "children": ["Amar A. P.", "Hanindia"]
+  },
+  {
+    "id": 30,
+    "husband": "Solikhin",
+    "wife": "Eri Erviana",
+    "children": ["Alfin R. R.", "Arsa"]
+  },
+  {
+    "id": 31,
+    "husband": "Danang Setiono",
+    "wife": "Novi",
+    "children": ["Serena"]
+  },
+  {
+    "id": 32,
+    "husband": "Ahmad Syafii",
+    "wife": "Sukayanti",
+    "children": []
+  },
+  {
+    "id": 33,
+    "husband": "Mugeno",
+    "wife": "Asih",
+    "children": ["Sri", "Toip", "Dul"]
+  },
+  {
+    "id": 34,
+    "husband": "Karyanto",
+    "wife": "Sri",
+    "children": ["Deni", "Cahyo"]
+  }
+]
