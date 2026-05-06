@@ -1,43 +1,87 @@
-# Astro Starter Kit: Minimal
+# 🌳 Silsilah Keluarga Bani Sumandar
 
-```sh
-npm create astro@latest -- --template minimal
+A simple interactive family tree web application built to visualize and document the lineage of Bani Sumandar.
+
+## 🧠 About
+
+This project was created to help family members explore and understand their family relationships through an interactive tree interface.
+
+Built as a static web app using Astro, with a focus on simplicity, readability, and usability.
+
+## ✨ Features
+
+* Recursive family tree rendering
+* Expand / collapse family branches
+* Search and highlight family members
+* Auto-expand when searching
+* Horizontal scroll support for large trees
+* Mobile-friendly layout
+
+## 🧱 Tech Stack
+
+* Astro
+* Tailwind CSS
+* JSON (static data)
+
+## 📂 Project Structure
+
+```txt
+src/
+  components/
+    TreeNode.astro
+  data/
+    family.json
+  pages/
+    index.astro
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🧾 Data Source
 
-## 🚀 Project Structure
+Family data is manually structured from internal family records.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Getting Started
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+Clone this repository:
+
+```bash
+git clone https://github.com/arkan69/family-tree.git
+cd family-tree
+npm install
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Open in browser:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```txt
+http://localhost:4321
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🔄 Updating Family Data
 
-## 🧞 Commands
+All family data is stored in:
 
-All commands are run from the root of the project, from a terminal:
+```txt
+src/data/family.json
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+After updating the file:
 
-## 👀 Want to learn more?
+```bash
+git add .
+git commit -m "update family data"
+git push
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The deployed site will automatically update via Vercel.
+
+## 🌍 Deployment
+
+This project is deployed using Vercel with automatic deployment on every push to the main branch.
+
+## 👤 Author
+
+Arkansyah Putra Wibowo
+
+---
+
+Built with purpose for family, and as a meaningful personal project.
